@@ -31,12 +31,16 @@ function showMovies(movies) {
   moviesList.innerHTML = '';
 
   movies.forEach((movie) => {
-    const {poster_path, title, vote_average} = movie;
+    const {poster_path, title, vote_average, overview} = movie;
     moviesList.innerHTML += `<li class="movie mx-2">
                            <img src="${IMGPATH + poster_path}" alt="${title}">
                            <div class="movie-infos">
                              <h3>${title}</h3>
                              <span class="${getClassByRate(vote_average)}">${vote_average}</span>
+                           </div>
+                           <div class="overview">
+                             <h3 class="d-flex justify-content-center align-items-center">Overview</h3>
+                             ${overview}
                            </div>
                          </li>
                         `;
