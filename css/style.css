@@ -60,6 +60,19 @@ body {
   padding: 3px;
   border-radius: 4px;
   align-self: center;
+  font-weight: bold;
+}
+
+.movie-infos span.green {
+  color: #1ebd1e;
+}
+
+.movie-infos span.orange {
+  color: #f3571d;
+}
+
+.movie-infos span.red {
+  color: #e70e23;
 }
 
 @media only screen and (min-width: 550px) {
