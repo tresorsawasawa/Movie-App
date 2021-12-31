@@ -9,11 +9,20 @@
   <title>Movies App</title>
 </head>
 <body>
+  <header id="header" class="w-100 bg-dark d-flex justify-content-center align-items-center">
+    <div class="header-container py-2 text-center">
+      <a href="#" class="logo">MovieInfos</a>
+      <form class="form w-100">
+        <input type="search" name="search-movie" class="w-100 justify-self-center" id="search-movie" placeholder="Search Movies">
+      </form>
+    </div>
+  </header>
   <main>
-    <div class="contrainer">
-      <ul class="movies-list"></ul>
+    <div class="contrainer pt-3">
+      <ul class="movies-list pt-5"></ul>
     </div>
   </main>
+
   <script src="./js/main.js"></script>
 </body>
 </html>
