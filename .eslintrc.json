@@ -11,7 +11,7 @@
   },
   "extends": ["airbnb-base"],
   "rules": {
-    "allowElseIf": true,
+    "camelcase": "off",
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",

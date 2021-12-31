@@ -5,25 +5,13 @@ const moviesList = document.querySelector('.movies-list');
 const form = document.querySelector('.form');
 const searchMovie = document.querySelector('#search-movie');
 
-// Initaially get movies by popularity
-async function getMovies(url) {
-  const response = await fetch(url);
-  const responseData = await response.json();
-
-  console.log(responseData);
-
-  showMovies(responseData.results);
-}
-getMovies(APIURL);
-
 function getClassByRate(vote) {
   if (vote >= 8) {
     return 'green';
-  } else if (vote >= 5) {
+  } if (vote >= 5) {
     return 'orange';
-  } else {
-    return 'red'
   }
+  return 'red';
 }
 
 function showMovies(movies) {
@@ -31,7 +19,12 @@ function showMovies(movies) {
   moviesList.innerHTML = '';
 
   movies.forEach((movie) => {
-    const {poster_path, title, vote_average, overview} = movie;
+    const {
+      poster_path,
+      title,
+      vote_average,
+      overview,
+    } = movie;
     moviesList.innerHTML += `<li class="movie mx-2">
                            <img src="${IMGPATH + poster_path}" alt="${title}">
                            <div class="movie-infos">
@@ -45,13 +38,24 @@ function showMovies(movies) {
                          </li>
                         `;
   });
-} 
+}
+
+// Initaially get movies by popularity
+async function getMovies(url) {
+  const response = await fetch(url);
+  const responseData = await response.json();
+
+  console.log(responseData);
+
+  showMovies(responseData.results);
+}
+getMovies(APIURL);
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const searchTerm = searchMovie.value;
 
-  if(searchTerm) {
+  if (searchTerm) {
     getMovies(SEARCHAPI + searchTerm);
 
     searchMovie.value = '';
