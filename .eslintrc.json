@@ -2,8 +2,7 @@
   "env": {
     "browser": true,
     "es6": true,
-    "jest": true,
-    "allowElseIf": true
+    "jest": true
   },
   "parser": "babel-eslint",
   "parserOptions": {
@@ -12,6 +11,7 @@
   },
   "extends": ["airbnb-base"],
   "rules": {
+    "allowElseIf": true,
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
