@@ -76,6 +76,10 @@ a {
   border-radius: 10px;
 }
 
+.movie:hover {
+  cursor: pointer;
+}
+
 .movie:last-child {
   margin-bottom: 15px;
 }
@@ -124,6 +128,8 @@ a {
   position: absolute;
   background-color: #21262d;
   color: #c9d1d9;
+  max-height: 100%;
+  overflow-y: auto;
   padding: 10px;
   right: 0;
   left: 0;
